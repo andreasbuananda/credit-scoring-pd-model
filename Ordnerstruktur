@@ -1,0 +1,39 @@
+credit-scoring-pd-model/
+│
+├── data/
+│   ├── raw/                    # Originale CSV-Dateien (unveränderlich)
+│   │   ├── GiveMeSomeCredit-training.csv
+│   │   └── GiveMeSomeCredit-testing.csv
+│   └── processed/              # Bereinigte und transformierte Daten
+│
+├── notebooks/
+│   ├── 01_EDA.ipynb            # Explorative Datenanalyse
+│   ├── 02_Preprocessing.ipynb  # Datenbereinigung & Feature Engineering
+│   ├── 03_Modeling.ipynb       # Modelltraining (LR, RF, XGBoost)
+│   ├── 04_Evaluation.ipynb     # Modellbewertung & Validierung
+│   └── 05_Scorecard.ipynb      # Credit Scorecard (WoE/IV)
+│
+├── src/
+│   ├── __init__.py
+│   ├── data_loader.py          # Datenladelogik
+│   ├── preprocessing.py        # Preprocessing-Pipeline
+│   ├── features.py             # Feature Engineering
+│   ├── models.py               # Modellklassen
+│   ├── evaluation.py           # Evaluierungsmetriken
+│   └── scorecard.py            # Scorecard-Berechnung
+│
+├── models/
+│   ├── logistic_regression.pkl
+│   ├── random_forest.pkl
+│   └── xgboost_model.pkl
+│
+├── reports/
+│   └── figures/                # Diagramme (ROC, KS, Feature Importance)
+│
+├── tests/
+│   └── test_preprocessing.py
+│
+├── .gitignore
+├── requirements.txt
+├── environment.yml
+└── README.md
