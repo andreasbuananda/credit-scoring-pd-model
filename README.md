@@ -13,11 +13,13 @@ Bezieht sich auf reale Anwendungsfälle im Bankwesen:
 ## 📊 Datensatz
 - **Quelle**: [Give Me Some Credit — Kaggle](https://www.kaggle.com/c/GiveMeSomeCredit)
 - **Umfang**: 150.000 Trainingsbeispiele, 11 Merkmale
-- **Ziel**: `SeriousDlqin2yrs` (1 = Ausfall innerhalb von 2 Jahren)
-- **Ausfallquote**: ~6,65 %
+- **Merkmale**:
+| Merkmale | Beschreibung | Kontext |
+| --- | --- | --- |
+| default | **Target**: Ausfall | Ausfallbezeichnung (1 = Ausfall) |
+| utilization | Kreditkartennutzung | Kreditauslastung |
+| past_due_30/60/90 | Anzahl der Zahlungsverzögerungen | Verstöße in der Vergangenheit |
+| debt_ratio | Schulden-Einkommens-Verhältnis | DTI-Verhältnis |
+| monthly_income | Monatliche Einkommen | Einkommensnachweis |
+| num_dependents | Anzahl der Angehörigen | Haushaltrisikofaktor |
 
-## 🔧 Tech-Stack
-Python 3.10 | scikit-learn | XGBoost | LightGBM | SHAP | scorecardpy | MLflow
-
-## 📁 Projektstruktur
-(siehe Dokumentation oben)
